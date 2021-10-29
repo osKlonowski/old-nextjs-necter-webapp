@@ -5,6 +5,7 @@
 import Head from "next/head";
 import React from "react";
 import HeroSection from "../components/heroSection/herosection";
+import MainPageLayout from "../components/mainPageLayout/mainPageLayout";
 import Navbar from "../components/navbar/navbar";
 // import utilStyles from "../styles/utils.module.css";
 
@@ -18,7 +19,7 @@ export default function Home({ props }: { props: any }): JSX.Element {
   return (
     <>
       <Head>
-        <title>Necter - Offline Dating</title>
+        <title>NECTER - Offline Dating</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -46,8 +47,9 @@ export default function Home({ props }: { props: any }): JSX.Element {
         <meta name="theme-color" content="#ffffff" />
         <meta name="description" content="Necter - Offline Dating" />
       </Head>
-      <Navbar />
-      <HeroSection />
+      <MainPageLayout>
+        <HeroSection />
+      </MainPageLayout>
     </>
     // <Layout home>
     // [> Keep the existing code here <]
