@@ -1,7 +1,9 @@
 import styles from "./herosection.module.scss";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 export default function HeroSection() {
-  // window.innerHeight
+  const { height, width } = useWindowDimensions();
+
   return (
     <>
       <div className={styles.herocontainer}>
@@ -11,6 +13,13 @@ export default function HeroSection() {
             Your browser does not support the videos
           </video>
         </div>
+        <style jsx>
+          {`
+            .herocontainer {
+              height: "${height}px";
+            }
+          `}
+        </style>
         {/* <style global jsx>{` */}
         {/* body > div:first-child, */}
         {/* div#__next, */}

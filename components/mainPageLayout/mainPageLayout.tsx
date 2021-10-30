@@ -6,7 +6,7 @@ export default function MainPageLayout({ children }: { children: any }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>;
+      <main>{children}</main>
       <Footer />
     </>
   );
